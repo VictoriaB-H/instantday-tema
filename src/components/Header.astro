@@ -1,5 +1,69 @@
 ---
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove the first "/"
 ---
-<div>
-Header - tilføj navigation mm.
-</div>
+
+<header x-data="{ showmenu: false }">
+  <div id="navbar" class="container mx-auto p-4 flex flex-row items-center">
+    <!-- Logo -->
+    <div id="logo" class="flex-shrink-0">
+      <a href="/">
+        <img src="img/icon.png" alt="icon" class="h-12 md:h-16" />
+      </a>
+    </div>
+
+    <!-- Dato i midten -->
+    <div class="flex-1 text-center font-semibold text-lg">18 October 2025</div>
+
+    <!-- Navigation -->
+    <nav id="desktopmenu" class="hidden lg:block flex-shrink-0">
+      <ul class="flex flex-row gap-4">
+        <li>
+          <a
+            href="/shareinstant/"
+            class={`transition-colors duration-300 ${
+              currentPath === "shareinstant/"
+                ? "font-bold text-[var(--color-secondary-500)]"
+                : "hover:text-[var(--color-secondary-500)]"
+            }`}
+          >
+            Share Your Instant
+          </a>
+        </li>
+        <li>
+          <a
+            href="/categories/"
+            class={`transition-colors duration-300 ${
+              currentPath === "categories/"
+                ? "font-bold text-[var(--color-secondary-500)]"
+                : "hover:text-[var(--color-secondary-500)]"
+            }`}
+          >
+            Categories
+          </a>
+        </li>
+        <li>
+          <a
+            href="/aboutus/"
+            class={`transition-colors duration-300 ${
+              currentPath === "aboutus/"
+                ? "font-bold text-[var(--color-secondary-500)]"
+                : "hover:text-[var(--color-secondary-500)]"
+            }`}
+          >
+            About
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Burger-menu (mobil) -->
+    <button
+      id="burgermenu"
+      class="lg:hidden text-3xl p-2"
+      x-on:click="showmenu = !showmenu"
+    >
+      ☰
+    </button>
+  </div>
+</header>
