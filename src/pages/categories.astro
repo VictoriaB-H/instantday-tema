@@ -1,0 +1,63 @@
+---
+import Intro from '../components/cat-intro.astro';
+import Sektion from '../components/cat-sektions.astro';
+import Button from '../components/Button.astro';
+import Header from '../components/Header.astro';
+---
+
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+		<title>Categories</title>
+	</head>
+
+    <header>
+        <Header></Header>
+    </header>
+
+	<body>
+        <main class="grid place-items-center">
+		<Intro />
+        <Sektion header="Experimental" 
+        information1="This category is all about pushing the limits of instant photography. How can we manipulate the image to create something new and exciting?" 
+        information2="This category has endless opportunities. The manipulation can be done before or after the image is taken — the sky is the limit!"
+        image="../../public/img/experimentalImg.png"
+        imageText="An example of how to execute this categori. Here is pictured a polaroid that has been burnt, and one that has been soaked in water.">
+         <Button>Join The Competition</Button>
+</Sektion>
+
+         <Sektion header="Portrait" 
+         information1="The portrait is a classic style of photography. For this category, we ask you to have fun with the unpredictability of instant photography." 
+         information2="How well do you capture the essence of your model the moment the flash goes off?"
+         image="../../public/img/portaitImg.png"
+          imageText="An example of how to execute this categori. This example shows a more abstract version of a portrait, where the face is cut off.">
+          <Button variant="green">Join The Competition</Button>
+</Sektion>
+
+          <Sektion header="Nature" 
+          information1="For this category, we want to see the world around us through your lens. Is it beautiful? Is it powerful? A calming presence, or a reminder of human domination?" 
+          information2="Whatever you choose to capture, it should reveal the intricacies and dynamics found in the very nature that surrounds us. "
+          image="../../public/img/natureImg.png"
+          imageText="An example of how to execute this categori. Here is two pictures of diffrent nature elemenmts, a tree and crop field.">
+           <Button variant="blue">Join The Competition</Button>
+</Sektion>
+
+           <Sektion header="Slice Of Life" 
+           information1="As a celebration of everyday life, this category highlights the joy in everything mundane. There are so many things we take for granted, only to truly appreciate them years later while flipping through old photo albums." 
+           information2="Show us something from your life that you might look back on fondly in a few years."
+           image="../../public/img/solImg.png"
+           imageText="An example of how to execute this categori. The first picture is of two small children eating at a fasfood booth, the other is a blurry polaroid of a small kitchen.">
+            <Button variant="yellow">Join The Competition</Button>
+</Sektion>
+</main>
+	</body>
+
+    <footer class="">
+    </footer>
+</html>

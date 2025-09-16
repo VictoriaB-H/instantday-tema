@@ -1,0 +1,16 @@
+---
+const {header, information1, information2, image, imageText} = Astro.props;
+
+---
+
+<section class="mx-10 my-9 md:grid md:grid-cols-2 md:gap-8 lg:gap-0 lg:my-10">
+    <div class="py-10 max-w-sm">
+        <h2 class="text-6xl">{header}</h2>
+    <p class="py-6 lg:text-xl">{information1}</p>
+    <p class="lg:text-xl">{information2}</p>
+    <slot />
+    </div>
+    <div class="pb-11 lg:flex lg:justify-end">
+       <img class="lg:max-h-fit" src={image} alt={imageText}>
+    </div>
+</section>
