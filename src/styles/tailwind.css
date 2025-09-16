@@ -12,12 +12,12 @@
 
 @font-face {
   font-family: "Antonio";
-  src: url("/fonts/Antonio.ttf") format("truetype");
+  src: url("/font/Antonio.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url("/fonts/Roboto.ttf") format("truetype");
+  src: url("/font/Roboto.ttf") format("truetype");
 }
 
 @theme {
