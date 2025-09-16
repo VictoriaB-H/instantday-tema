@@ -1,15 +1,62 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from '../components/Button.astro';
-import Link from '../components/Link.astro';
-import { Image } from 'astro:assets';
-import thumbsup from "../assets/images/thumbsup.png";
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import Heading from "../components/Heading.astro";
 ---
+
 <MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
-	</article>
+  <main>
+    <div class="mx-auto max-w-screen-xl">
+      <Heading
+        htmlheading="h1"
+        size="large"
+        font="paytoneone"
+        stylingclasses="w-full text-4xl md:text-6xl color-primary-400 text-center"
+      >
+        INSTANT DAY
+      </Heading>
+      <p class="text-center mb-5 mt-3 text-xl">
+        CELEBRATE INSTANT DAY ON OCT. 18
+      </p>
+    </div>
+
+    <!-- Herosektionen -->
+    <section class="relative w-full">
+      <!-- Hero-billede gjort lavere -->
+      <img
+        src="/img/herobillede.png"
+        alt="Hero billede"
+        class="w-full h-[35vh] sm:h-[45vh] md:h-[60vh] object-cover"
+      />
+
+      <div
+        class="absolute inset-0 flex items-center justify-center z-10 top-80"
+      >
+        <Button href="/shareinstant/">JOIN THE COMPETITION</Button>
+      </div>
+
+      <a
+        href="#next-section"
+        class="absolute left-1/2 -translate-x-1/2 z-10 mt-5 animate-bounce text-[var(--color-primary-500)]"
+      >
+        <svg
+          class="w-8 h-8"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M6 9l6 6 6-6"></path>
+        </svg>
+      </a>
+    </section>
+
+    <!-- Sektion man scroller ned til -->
+    <section id="next-section" class="py-20 text-center">
+      <h2 class="text-3xl font-bold">Next Section</h2>
+      <p class="mt-4 text-lg">Her kommer indholdet under hero.</p>
+    </section>
+  </main>
 </MainLayout>
