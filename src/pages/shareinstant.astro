@@ -111,7 +111,7 @@ import Heading from "../components/Heading.astro";
             name="name"
             placeholder="Full name"
             required
-            class="w-full border-2 border-[var(--color-primary-500)] rounded-md px-3 py-2 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary-500)]"
+            class="w-full border-2 border-red rounded-md px-3 py-2 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red"
           />
         </div>
 
@@ -127,7 +127,7 @@ import Heading from "../components/Heading.astro";
               name="email"
               placeholder="Email Adresse"
               required
-              class="w-full border-2 border-[var(--color-primary-500)] rounded-md px-3 py-2 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary-500)]"
+              class="w-full border-2 border-red rounded-md px-3 py-2 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red"
             />
           </div>
           <div>
@@ -140,7 +140,7 @@ import Heading from "../components/Heading.astro";
               name="title"
               placeholder="Submission title"
               required
-              class="w-full border-2 border-[var(--color-primary-500)] rounded-md px-3 py-2 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary-500)]"
+              class="w-full border-2 border-red rounded-md px-3 py-2 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red"
             />
           </div>
         </div>
@@ -153,7 +153,7 @@ import Heading from "../components/Heading.astro";
             id="file"
             name="file"
             required
-            class="w-full border-2 border-[var(--color-primary-500)] rounded-md px-3 py-10 text-center text-gray-400 file:hidden"
+            class="w-full border-2 border-red rounded-md px-3 py-10 text-center text-gray-400 file:hidden"
           />
         </div>
 
@@ -168,7 +168,7 @@ import Heading from "../components/Heading.astro";
             rows="4"
             required
             placeholder="Describe the image and how you took it in a sentence or two"
-            class="w-full border-2 border-[var(--color-primary-500)] rounded-md px-3 py-2 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary-500)]"
+            class="w-full border-2 border-red rounded-md px-3 py-2 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red"
           ></textarea>
         </div>
 
@@ -179,14 +179,11 @@ import Heading from "../components/Heading.astro";
             id="terms"
             name="terms"
             required
-            class="h-4 w-4 text-[var(--color-primary-500)] border-2 border-[var(--color-primary-500)] rounded focus:ring-[var(--color-primary-500)]"
+            class="h-4 w-4 text-red border-2 border-red rounded focus:ring-red"
           />
           <label for="terms" class="ml-2 text-sm">
             I have read and agree to
-            <a
-              href="#terms-section"
-              class="underline text-[var(--color-primary-500)]"
-            >
+            <a href="#terms-section" class="underline text-red">
               the terms and conditions
             </a>
           </label>
@@ -195,7 +192,7 @@ import Heading from "../components/Heading.astro";
         <!-- indsend -->
         <button
           type="submit"
-          class="w-full border-2 border-[var(--color-primary-500)] rounded-md py-3 font-medium text-gray-700 hover:bg-red-50"
+          class="w-full border-2 border-red rounded-md py-3 font-medium text-gray-700 hover:bg-red-50"
         >
           Submit!
         </button>
@@ -212,7 +209,7 @@ import Heading from "../components/Heading.astro";
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <!-- Participation -->
-          <details class="border border-[var(--color-primary-500)] rounded-lg">
+          <details class="border border-red rounded-lg">
             <summary class="cursor-pointer px-4 py-3 font-medium"
               >Participation</summary
             >
@@ -223,7 +220,7 @@ import Heading from "../components/Heading.astro";
           </details>
 
           <!-- Instant Photo -->
-          <details class="border border-[var(--color-primary-500)] rounded-lg">
+          <details class="border border-red rounded-lg">
             <summary class="cursor-pointer px-4 py-3 font-medium"
               >Instant Photo</summary
             >
@@ -244,7 +241,7 @@ import Heading from "../components/Heading.astro";
           </details>
 
           <!-- Consent -->
-          <details class="border border-[var(--color-primary-500)] rounded-lg">
+          <details class="border border-red rounded-lg">
             <summary class="cursor-pointer px-4 py-3 font-medium"
               >Consent</summary
             >
@@ -257,7 +254,7 @@ import Heading from "../components/Heading.astro";
           </details>
 
           <!-- Legal stuff -->
-          <details class="border border-[var(--color-primary-500)] rounded-lg">
+          <details class="border border-red rounded-lg">
             <summary class="cursor-pointer px-4 py-3 font-medium"
               >Legal stuff</summary
             >
@@ -272,7 +269,7 @@ import Heading from "../components/Heading.astro";
           </details>
 
           <!-- Number of submissions -->
-          <details class="border border-[var(--color-primary-500)] rounded-lg">
+          <details class="border border-red rounded-lg">
             <summary class="cursor-pointer px-4 py-3 font-medium"
               >Number of submissions</summary
             >
@@ -282,7 +279,7 @@ import Heading from "../components/Heading.astro";
           </details>
 
           <!-- Usage rights -->
-          <details class="border border-[var(--color-primary-500)] rounded-lg">
+          <details class="border border-red rounded-lg">
             <summary class="cursor-pointer px-4 py-3 font-medium"
               >Usage rights</summary
             >
@@ -296,7 +293,7 @@ import Heading from "../components/Heading.astro";
           </details>
 
           <!-- Copyright -->
-          <details class="border border-[var(--color-primary-500)] rounded-lg">
+          <details class="border border-red rounded-lg">
             <summary class="cursor-pointer px-4 py-3 font-medium"
               >Copyright</summary
             >
@@ -314,7 +311,7 @@ import Heading from "../components/Heading.astro";
           </details>
 
           <!-- Announcement of Winners -->
-          <details class="border border-[var(--color-primary-500)] rounded-lg">
+          <details class="border border-red rounded-lg">
             <summary class="cursor-pointer px-4 py-3 font-medium"
               >Announcement of Winners</summary
             >
