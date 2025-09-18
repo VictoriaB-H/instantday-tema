@@ -4,23 +4,6 @@ import Heading from "../components/Heading.astro";
 import Button from "../components/Button.astro";
 ---
 
-<style>
-  /* Custom scrollbar styling */
-  .scrollbar-thin::-webkit-scrollbar {
-    height: 6px; /* kun horisontale scrollbars */
-  }
-  .scrollbar-thin::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  .scrollbar-thin::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.3); /* grå thumb */
-    border-radius: 9999px;
-  }
-  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-</style>
-
 <MainLayout>
   <!-- Hero heading -->
   <Heading
@@ -33,35 +16,37 @@ import Button from "../components/Button.astro";
   </Heading>
 
   <!-- Team portraits -->
-  <section class="mx-auto max-w-screen-xl px-4 md:px-8 mb-16">
+  <section class="mx-auto max-w-screen-xl px-6 md:px-12 py-12 lg:py-16">
     <div
-      class="flex overflow-x-auto gap-4 snap-x snap-mandatory sm:grid sm:grid-cols-4 sm:gap-6 sm:justify-items-center sm:overflow-visible"
+      class="flex overflow-x-auto gap-3 snap-x snap-mandatory scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-transparent sm:grid sm:grid-cols-4 sm:gap-6 sm:justify-items-center sm:overflow-visible"
     >
       <img
         src="/img/jonas.png"
-        alt="Team member 1"
-        class="w-32 sm:w-auto snap-center"
-      />
-      <img
-        src="/img/birgitte.png"
-        alt="Team member 2"
-        class="w-32 sm:w-auto snap-center"
+        alt="Jonas"
+        class="w-28 sm:w-32 md:w-40 lg:w-48 h-auto hover:scale-105 transition-transform snap-center"
       />
       <img
         src="/img/stefan.png"
-        alt="Team member 3"
-        class="w-32 sm:w-auto snap-center"
+        alt="Stefan"
+        class="w-28 sm:w-32 md:w-40 lg:w-48 h-auto hover:scale-105 transition-transform snap-center"
+      />
+      <img
+        src="/img/birgitte.png"
+        alt="Birgitte"
+        class="w-28 sm:w-32 md:w-40 lg:w-48 h-auto hover:scale-105 transition-transform snap-center"
       />
       <img
         src="/img/anders.png"
-        alt="Team member 4"
-        class="w-32 sm:w-auto snap-center"
+        alt="Anders"
+        class="w-28 sm:w-32 md:w-40 lg:w-48 h-auto hover:scale-105 transition-transform snap-center"
       />
     </div>
   </section>
 
   <!-- About text -->
-  <section class="mx-auto max-w-screen-md px-4 md:px-8 mb-16 space-y-6">
+  <section
+    class="mx-auto max-w-screen-md px-6 md:px-12 py-12 lg:py-16 space-y-6 font-roboto text-lg leading-relaxed"
+  >
     <p>
       <strong>Instant Day</strong> is a small project run by lecturers from the Multimedia
       Design programme at EK – Business Academy Copenhagen.
@@ -78,10 +63,10 @@ import Button from "../components/Button.astro";
   </section>
 
   <!-- Sponsors -->
-  <section class="mx-auto max-w-screen-md px-4 md:px-8 mb-16">
-    <h2 class="text-2xl font-paytoneone mb-4 text-[var(--color-primary-500)]">
-      Sponsors
-    </h2>
+  <section
+    class="mx-auto max-w-screen-md px-6 md:px-12 py-12 lg:py-16 font-roboto text-lg leading-relaxed"
+  >
+    <h2 class="text-2xl font-paytoneone mb-6 text-[#02a1b9]">Sponsors</h2>
     <p>
       Instant Day is not affiliated with any companies within the Instant
       Photography industry. The only organisation backing us is
@@ -90,13 +75,15 @@ import Button from "../components/Button.astro";
   </section>
 
   <!-- Judges -->
-  <section class="mx-auto max-w-screen-lg px-4 md:px-8 mb-16">
+  <section class="mx-auto max-w-screen-lg px-6 md:px-12 py-12 lg:py-16">
     <h2
-      class="text-2xl font-paytoneone mb-6 text-center text-[var(--color-primary-500)]"
+      class="text-2xl font-paytoneone mb-8 text-center text-[var(--color-primary-500)]"
     >
       The Judges
     </h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 gap-8 font-roboto text-lg leading-relaxed"
+    >
       <ul class="list-disc list-inside space-y-2">
         <li>
           Jonas Hasle (Assistant lecturer, Multimedia Design programme at EK)
@@ -112,7 +99,7 @@ import Button from "../components/Button.astro";
           EK)
         </li>
       </ul>
-      <div class="bg-gray-50 rounded-lg p-4 text-sm">
+      <div class="bg-gray-50 rounded-lg p-6 text-base">
         <p>
           Students on the Digital Design Elective on the Multimedia Design
           programme at KEA also participate in reviewing and running Instant
@@ -123,29 +110,29 @@ import Button from "../components/Button.astro";
   </section>
 
   <!-- Polaroid gallery -->
-  <section class="mx-auto max-w-screen-xl px-4 md:px-8 mb-16">
+  <section class="mx-auto max-w-screen-xl px-6 md:px-12 py-12 lg:py-16">
     <div
-      class="flex overflow-x-auto gap-4 snap-x snap-mandatory sm:flex-wrap sm:justify-center sm:gap-2 sm:overflow-visible"
+      class="flex overflow-x-auto gap-4 snap-x snap-mandatory scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-transparent sm:flex-wrap sm:justify-center sm:gap-6 sm:overflow-visible"
     >
       <img
         src="/img/aboutus1.png"
         alt="Polaroid example"
-        class="max-h-60 rotate-[-4deg] snap-center"
+        class="max-h-60 rotate-[-4deg] snap-center hover:scale-105 hover:rotate-0 hover:shadow-lg transition-transform"
       />
       <img
         src="/img/aboutus2.png"
         alt="Polaroid example"
-        class="max-h-60 rotate-[3deg] snap-center"
+        class="max-h-60 rotate-[3deg] snap-center hover:scale-105 hover:rotate-0 hover:shadow-lg transition-transform"
       />
       <img
         src="/img/aboutus3.png"
         alt="Polaroid example"
-        class="max-h-60 rotate-[-2deg] snap-center"
+        class="max-h-60 rotate-[-2deg] snap-center hover:scale-105 hover:rotate-0 hover:shadow-lg transition-transform"
       />
       <img
         src="/img/aboutus4.png"
         alt="Polaroid example"
-        class="max-h-60 rotate-[2deg] snap-center"
+        class="max-h-60 rotate-[2deg] snap-center hover:scale-105 hover:rotate-0 hover:shadow-lg transition-transform"
       />
     </div>
   </section>
