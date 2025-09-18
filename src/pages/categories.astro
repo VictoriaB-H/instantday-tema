@@ -2,26 +2,11 @@
 import Intro from '../components/cat-intro.astro';
 import Sektion from '../components/cat-sektions.astro';
 import Button from '../components/Button.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import MainLayout from '../layouts/MainLayout.astro';
 ---
 
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
-		<title>Categories</title>
-	</head>
-
-    <header>
-        <Header></Header>
-    </header>
-
+<MainLayout>
 	<body>
         <main class="grid place-items-center">
 		<Intro />
@@ -57,9 +42,4 @@ import Footer from '../components/Footer.astro';
             <Button variant="yellow">Join The Competition</Button>
 </Sektion>
 </main>
-	</body>
-
-    <footer class="">
-        <Footer></Footer>
-    </footer>
-</html>
+</MainLayout>
