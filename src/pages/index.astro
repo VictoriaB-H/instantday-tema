@@ -35,7 +35,7 @@ import Heading from "../components/Heading.astro";
       <img
         src="/img/03-amager-strand.jpg"
         alt="Overlay billede"
-        class="absolute top-10 sm:top-16 md:top-20 left-1/2 transform -translate-x-1/2
+        class="absolute top-5 sm:top-16 md:top-20 left-1/2 transform -translate-x-1/2
            w-[200px] sm:w-[230px] md:w-[300px] h-auto z-20"
       />
 
@@ -50,7 +50,7 @@ import Heading from "../components/Heading.astro";
 
     <a
       href="#next-section"
-      class="absolute left-1/2 -translate-x-1/2 z-10 mt-5 animate-bounce text-[var(--color-primary-500)]"
+      class="absolute left-1/2 -translate-x-1/2 z-10 mt-5 animate-bounce text-red"
     >
       <svg
         class="w-8 h-8"
@@ -65,12 +65,7 @@ import Heading from "../components/Heading.astro";
   </main>
 
   <!-- Sektion man scroller ned til -->
-  <section id="next-section" class="py-20 text-center">
-    <h2 class="text-3xl font-bold">Next Section</h2>
-    <p class="mt-4 text-lg">Her kommer indholdet under hero.</p>
-  </section>
-
-  <section class="relative w-full py-12">
+  <section id="next-section" class="relative w-full py-12">
     <div class="mx-auto max-w-screen-xl px-4 md:px-8">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div>
@@ -96,7 +91,7 @@ import Heading from "../components/Heading.astro";
             You can submit up to 5 photos – just repeat steps 1–3.
           </p>
 
-          <Button href="/shareinstant" variant="outline" size="lg">
+          <Button href="/shareinstant" variant="red">
             Join The Competition
           </Button>
         </div>
